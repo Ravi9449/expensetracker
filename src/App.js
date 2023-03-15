@@ -3,12 +3,15 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Speech from "./components/Speech/Speech";
+import HeaderBeforeLogin from "./components/Header/HeaderBeforeLogin";
 
 function App() {
   return (
     <div>
       <div>
-        <Header />
+        {/* If else condition to render header */}
+        {/* <Header /> */}
+        <HeaderBeforeLogin />
       </div>
       <div>
         <Speech />
