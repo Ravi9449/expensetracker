@@ -19,7 +19,7 @@ const HeaderBeforeLogin = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav
-              className="mx-auto"
+              className="ms-auto"
               style={{ fontSize: "1.3rem", gap: "2rem" }}
             >
               <Nav.Link href="/aboutus" style={{ color: "black" }}>
