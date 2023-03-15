@@ -1,4 +1,4 @@
-#Expense Tracker Application
+##Expense Tracker Application
 
 Welcome to Expense Tracker Application!
 
