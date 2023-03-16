@@ -37,7 +37,6 @@ const Expense = (props) => {
       .catch((err) => {
         toast.error("Failed: " + err.message);
       });
-    window.location.href("/");
   };
 
   let navigate = useNavigate();
@@ -77,11 +76,11 @@ const Expense = (props) => {
                     onChange={(e) => setCategory(e.target.value)}
                     className="form-control"
                   >
-                    <option value="">Select a category</option>
-                    <option>Food</option>
-                    <option>Groceries</option>
-                    <option>Travel</option>
-                    <option>Entertainment</option>
+                    <option value=" ">Select a category</option>
+                    <option value="food">Food</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="travel">Travel</option>
+                    <option value="entertainment">Entertainment</option>
                   </select>
                 </div>
               </div>

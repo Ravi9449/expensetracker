@@ -48,6 +48,13 @@
       "notes": "sfcasdcas",
       "date": "2023-03-16",
       "id": 7
+    },
+    {
+      "amount": "5",
+      "category": "",
+      "notes": "dxscjkbsjc",
+      "date": "2023-03-16",
+      "id": 8
     }
   ],
   "users": [
@@ -79,6 +86,11 @@
       "name": "test",
       "id": "test3@mail.com",
       "password": "123"
+    },
+    {
+      "name": "krishna",
+      "id": "krishna@mail.com",
+      "password": "12345"
     }
   ]
 }
