@@ -6,8 +6,8 @@ import "./Login.css";
 const Login = () => {
   const [id, changeid] = useState("");
   const [password, changepassword] = useState("");
-  const [isLogin, changeIsLogin] = useState(false);
-  const [authenticated, setAuthenticated] = useState(false);
+  // const [isLogin, changeIsLogin] = useState(false);
+  // const [authenticated, setAuthenticated] = useState(false);
 
   const navigate = useNavigate();
 
@@ -33,7 +33,7 @@ const Login = () => {
               console.log("loggedddd");
               sessionStorage.setItem("email", id);
               navigate("/Dashboard");
-              changeIsLogin(true);
+              // changeIsLogin(true);
               //   navigate("/");
             } else {
               toast.error("Please Enter valid credentials");
