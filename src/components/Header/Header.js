@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Expense from "../Expense/Expense";
 
 const Header = () => {
   return (
@@ -51,7 +52,7 @@ const Header = () => {
         <Route path="/" element={<Dashboard />} />
         <Route path="/history" element={<History />} />
         <Route path="/tracker" element={<Tracker />} />
-        {/* <Route path="/expense" element={<Expense />} /> */}
+        <Route path="/expense" element={<Expense />} />
       </Routes>
     </div>
   );

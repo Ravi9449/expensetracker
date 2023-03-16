@@ -1,0 +1,28 @@
+.rectangle {
+    display: inline-block;
+    width: 500px;
+    height: 250px;
+    background: rgb(230, 224, 224);
+    margin: 20px;
+  }
+
+h3 { 
+    display: block;
+    font-weight: bold;
+}
+
+/* .expense{
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 0;
+}
+
+.income{
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 80px;
+    margin-right: 0;
+} */

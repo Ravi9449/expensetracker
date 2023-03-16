@@ -10,8 +10,8 @@ function App() {
     <div>
       <div>
         {/* If else condition to render header */}
-        {/* <Header /> */}
-        <HeaderBeforeLogin />
+        <Header />
+        {/* <HeaderBeforeLogin /> */}
       </div>
       <div>
         <Speech />
