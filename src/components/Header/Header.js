@@ -9,8 +9,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Expense from "../Expense/Expense";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  function logout() {
+    sessionStorage.removeItem("email");
+    navigate("/login");
+  }
   return (
     <div>
       <Navbar expand="lg" light style={{ backgroundColor: "#e3f2fd" }}>
@@ -42,7 +48,7 @@ const Header = () => {
                 style={{ fontSize: "1.3rem", gap: "1rem" }}
               >
                 <NavDropdown.Item>Settings</NavDropdown.Item>
-                <NavDropdown.Item>Logout</NavDropdown.Item>
+                <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
 
 const Login = () => {
   const [id, changeid] = useState("");
   const [password, changepassword] = useState("");
-  // const [isLogin, changeIsLogin] = useState(false);
-  // const [authenticated, setAuthenticated] = useState(false);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,8 +15,6 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Perform login logic here
-    // If login is successful, navigate to the dashboard page
     if (validate()) {
       fetch("http://localhost:8001/users/" + id)
         .then((res) => {
@@ -32,7 +28,7 @@ const Login = () => {
               toast.success("Success");
               console.log("loggedddd");
               sessionStorage.setItem("email", id);
-              navigate("/Dashboard");
+              navigate("/");
               // changeIsLogin(true);
               //   navigate("/");
             } else {
@@ -59,37 +55,9 @@ const Login = () => {
     return result;
   };
 
-  //   const auth = () =>{
-  //     const sessionID = localStorage.getItem(sessionID)
-  //     if (sessionID) {
-  //              // Verify the session ID with the server
-  //              fetch('http://localhost:3001/users/' + email, {
-  //                method: 'POST',
-  //                headers: {
-  //                  'Content-Type': 'application/json',
-  //                },
-  //                body: JSON.stringify({ sessionID }),
-  //              })
-  //                .then((response) => {
-  //                  if (response.ok) {
-  //                    setAuthenticated(true);
-  //                  } else {
-  //                    setAuthenticated(false);
-  //                    localStorage.removeItem('sessionID');
-  //                    window.location.href = '/login';
-  //                  }
-  //                })
-  //                .catch((error) => {
-  //                  console.error('Error verifying session:', error);
-  //                });
-  //            } else {
-  //              setAuthenticated(false);
-  //              window.location.href = '/login';
-  //            }
-  //   }
-
   return (
     <div className="loginContainer">
+      <ToastContainer />
       <div className={"loginContainerv2"}>
         <h1>Welcome back</h1>
 

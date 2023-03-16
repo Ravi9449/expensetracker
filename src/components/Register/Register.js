@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Registration = () => {
   const [name, namechange] = useState("");
@@ -16,7 +17,15 @@ const Registration = () => {
       body: JSON.stringify(regobj),
     })
       .then((res) => {
-        toast.success("Registered successfully");
+        if (res.status === 500) {
+          toast.error("Failed: " + "User already exists with provided info");
+        }
+        if (res.status === 201) {
+          toast.success("Registered successfully");
+          namechange("");
+          idchange("");
+          passwordchange("");
+        }
       })
       .catch((err) => {
         toast.error("Failed: " + err.message);
@@ -24,6 +33,7 @@ const Registration = () => {
   };
   return (
     <div>
+      <ToastContainer />
       <div className="offset-lg-3 col-lg-6">
         <form id="check" className="container" onSubmit={handlesubmit}>
           <div className="card">
@@ -78,7 +88,6 @@ const Registration = () => {
               <button type="submit" className="btn btn-primary">
                 Register
               </button>
-              {/* <button className="btn btn-danger" onClick={}>Cancel</button> */}
             </div>
           </div>
         </form>

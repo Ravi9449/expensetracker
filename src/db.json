@@ -1,95 +1,18 @@
 {
   "expense": [
     {
-      "amount": "10",
+      "amount": "100",
       "category": "food",
-      "notes": "20a...................................................",
+      "notes": "gortz",
       "date": "2023-03-16",
+      "user": "check@mail.com",
       "id": 1
-    },
-    {
-      "amount": "12",
-      "category": "23",
-      "notes": "",
-      "date": "2023-03-16",
-      "id": 2
-    },
-    {
-      "amount": "50",
-      "category": "Food",
-      "notes": "",
-      "date": "2023-03-16",
-      "id": 3
-    },
-    {
-      "amount": "10",
-      "category": "Groceries",
-      "notes": "wec",
-      "date": "2023-03-16",
-      "id": 4
-    },
-    {
-      "amount": "35",
-      "category": "Travel",
-      "notes": "qwe",
-      "date": "2023-03-16",
-      "id": 5
-    },
-    {
-      "amount": "77",
-      "category": "Travel",
-      "notes": "123dsc",
-      "date": "2023-03-16",
-      "id": 6
-    },
-    {
-      "amount": "88",
-      "category": "Entertainment",
-      "notes": "sfcasdcas",
-      "date": "2023-03-16",
-      "id": 7
-    },
-    {
-      "amount": "5",
-      "category": "",
-      "notes": "dxscjkbsjc",
-      "date": "2023-03-16",
-      "id": 8
     }
   ],
   "users": [
     {
-      "id": 1,
-      "name": "",
-      "password": "",
-      "email": "",
-      "phone": "",
-      "address": "",
-      "gender": "male"
-    },
-    {
-      "name": "test",
-      "id": "test@mail.com",
-      "password": "123"
-    },
-    {
-      "name": "test",
-      "id": "test1@mail.com",
-      "password": "123"
-    },
-    {
-      "name": "test",
-      "id": "test2@mail.com",
-      "password": "123"
-    },
-    {
-      "name": "test",
-      "id": "test3@mail.com",
-      "password": "123"
-    },
-    {
-      "name": "krishna",
-      "id": "krishna@mail.com",
+      "name": "check",
+      "id": "check@mail.com",
       "password": "12345"
     }
   ]
