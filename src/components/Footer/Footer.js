@@ -7,11 +7,11 @@ const Footer = () => {
       fixed="bottom"
       expand="lg"
       light
-      style={{ backgroundColor: "#e3f2fd" }}
+      style={{ backgroundColor: "#27699e" }}
     >
       <Container>
         <Nav className="mx-auto" style={{ fontSize: "1.3rem", gap: "2rem" }}>
-          <Navbar.Brand style={{ color: "black" }}>
+          <Navbar.Brand style={{ color: "white" }}>
             &copy;{new Date().getFullYear()} Copyright: EasyTracker
           </Navbar.Brand>
         </Nav>

@@ -11,7 +11,7 @@ import Register from "../Register/Register";
 const HeaderBeforeLogin = () => {
   return (
     <div>
-      <Navbar expand="lg" light style={{ backgroundColor: "#e3f2fd" }}>
+      <Navbar expand="lg" light style={{ backgroundColor: "#27699e" }}>
         <Container>
           <Navbar.Brand style={{ fontSize: "1.5rem", gap: "1rem" }}>
             EasyTracker
@@ -22,13 +22,13 @@ const HeaderBeforeLogin = () => {
               className="ms-auto"
               style={{ fontSize: "1.3rem", gap: "2rem" }}
             >
-              <Nav.Link href="/aboutus" style={{ color: "black" }}>
+              <Nav.Link href="/aboutus" style={{ color: "white" }}>
                 About US
               </Nav.Link>
-              <Nav.Link href="/login" style={{ color: "black" }}>
+              <Nav.Link href="/login" style={{ color: "white" }}>
                 Login
               </Nav.Link>
-              <Nav.Link href="/register" style={{ color: "black" }}>
+              <Nav.Link href="/register" style={{ color: "white" }}>
                 Register
               </Nav.Link>
             </Nav>

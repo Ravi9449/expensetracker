@@ -19,9 +19,9 @@ const Header = () => {
   }
   return (
     <div>
-      <Navbar expand="lg" light style={{ backgroundColor: "#e3f2fd" }}>
+      <Navbar expand="lg" light style={{ backgroundColor: "#27699e" }}>
         <Container>
-          <Navbar.Brand style={{ fontSize: "1.5rem", gap: "1rem" }}>
+          <Navbar.Brand style={{ fontSize: "1.5rem", gap: "1rem",color:"white" }}>
             EasyTracker
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,13 +30,13 @@ const Header = () => {
               className="mx-auto"
               style={{ fontSize: "1.3rem", gap: "2rem" }}
             >
-              <Nav.Link href="/" style={{ color: "black" }}>
+              <Nav.Link href="/" style={{ color: "white" }}>
                 Dashboard
               </Nav.Link>
-              <Nav.Link href="/history" style={{ color: "black" }}>
+              <Nav.Link href="/history" style={{ color: "white" }}>
                 History
               </Nav.Link>
-              <Nav.Link href="/tracker" style={{ color: "black" }}>
+              <Nav.Link href="/tracker" style={{ color: "white" }}>
                 Tracker
               </Nav.Link>
             </Nav>
@@ -45,7 +45,7 @@ const Header = () => {
                 alignRight
                 title="Profile"
                 id="collasible-nav-dropdown"
-                style={{ fontSize: "1.3rem", gap: "1rem" }}
+                style={{ fontSize: "1.3rem", gap: "1rem" ,color: "white" }}
               >
                 <NavDropdown.Item>Settings</NavDropdown.Item>
                 <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
