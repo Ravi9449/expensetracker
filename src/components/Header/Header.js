@@ -19,8 +19,8 @@ const Header = () => {
     navigate("/login");
   }
   return (
-    <div>
-      <Navbar expand="lg" light style={{ backgroundColor: "#27699e" }}>
+    <div data-testid="Header">
+      <Navbar expand="lg" light style={{ backgroundColor: "#27699e" }} data-testid="HNavbar">
         <Container>
           <Navbar.Brand style={{ fontSize: "1.5rem", gap: "1rem",color:"white" }}>
             EasyTracker

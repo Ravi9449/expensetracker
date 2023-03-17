@@ -56,10 +56,10 @@ const Login = () => {
   };
 
   return (
-    <div className="loginContainer">
+    <div className="loginContainer" data-testid="Login">
       <ToastContainer />
       <div className={"loginContainerv2"}>
-        <h1>Welcome back</h1>
+        <h1 data-testid="login_h1">Welcome back</h1>
 
         <div className={"inputContainer"}>
           <label>EMAIL</label>

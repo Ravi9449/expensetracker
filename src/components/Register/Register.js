@@ -34,7 +34,7 @@ const Registration = () => {
   return (
     <div>
       <ToastContainer />
-      <div className="offset-lg-3 col-lg-6">
+      <div className="offset-lg-3 col-lg-6" data-testid="Register">
         <form id="check" className="container" onSubmit={handlesubmit}>
           <div className="card">
             <div className="card-header">

@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import data from '../../db.json';
@@ -7,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { auto } from "@popperjs/core";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
+import axios from "axios";
 
 
 const BarChart = () => {

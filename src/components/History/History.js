@@ -44,7 +44,7 @@ const History = () => {
   const filteredIncome = record.filter((item) => item.category === categoryFilter || categoryFilter === "");
 
   return (
-    <div>
+    <div data-testid="History">
       
       <div className="col-lg-6">
                 <div className="form-group">

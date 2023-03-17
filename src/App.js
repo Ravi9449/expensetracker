@@ -7,7 +7,7 @@ import HeaderBeforeLogin from "./components/Header/HeaderBeforeLogin";
 import { useLocation } from "react-router-dom";
 
 function App() {
-  const location = useLocation();
+  // const location = useLocation();
   const [user, setuser] = useState("");
 
   useEffect(() => {

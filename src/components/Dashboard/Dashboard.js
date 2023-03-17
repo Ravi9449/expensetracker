@@ -9,7 +9,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
+    <div data-testid="Dashboard">
       <h1>Dashboard</h1>
       <div className="rectangle">
         <h3>

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import alanBtn from "@alan-ai/alan-sdk-web";
+// import alanBtn from "@alan-ai/alan-sdk-web";
 import { useNavigate } from "react-router-dom";
 
 function Speech(props) {
