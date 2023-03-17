@@ -2,7 +2,7 @@
   "expense": [
     {
       "amount": "100",
-      "category": "Food",
+      "category": "food",
       "notes": "gortz",
       "date": "2023-03-16",
       "user": "check@mail.com",
@@ -10,7 +10,7 @@
     },
     {
       "amount": "635",
-      "category": "Groceries",
+      "category": "groceries",
       "notes": "dummy",
       "date": "2023-03-16",
       "user": "monisha@gmail.com",

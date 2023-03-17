@@ -4,6 +4,7 @@ import Horizontal from "../Charts/Horizontal";
 import './Tracker.css'
 import OptionChart from "../Charts/OptionChart";
 import ApexCharts from 'apexcharts'
+import BarChart from "../Charts/BarChart";
 
 const Tracker = () => {
   

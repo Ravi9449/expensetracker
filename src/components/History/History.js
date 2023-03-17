@@ -6,6 +6,8 @@ import data from '../../db.json'
 import "./History.css";
 import { useNavigate } from "react-router-dom";
 import { auto } from "@popperjs/core";
+import BarChart from "../Charts/BarChart";
+import OptionChart from "../Charts/OptionChart";
 
 const History = () => {
   const [record, setRecord] = useState([]);
@@ -39,10 +41,11 @@ const History = () => {
   };
 
   const [categoryFilter, setCategoryFilter] = useState("");
-  const filteredIncome = data.expense.filter((item) => item.category === categoryFilter || categoryFilter === "");
+  const filteredIncome = record.filter((item) => item.category === categoryFilter || categoryFilter === "");
 
   return (
     <div>
+      
       <div className="col-lg-6">
                 <div className="form-group">
                   <label>
