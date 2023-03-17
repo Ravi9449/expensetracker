@@ -66,7 +66,7 @@ const Expense = (props) => {
   };
 
   return (
-    <div className="offset-lg-3 col-lg-6">
+    <div className="offset-lg-3 col-lg-6" data-testid="Expense">
       <ToastContainer />
       <form id="check" className="container">
         <div className="card">
