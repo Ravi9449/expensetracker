@@ -13,24 +13,32 @@ const Expense = (props) => {
   const [date, setDate] = useState(new Date().toJSON().slice(0, 10));
 
   useEffect(() => {
-    if (location?.state?.type === "edit") {
-      setAmount(location?.state?.data?.amount);
-      setCategory(location?.state?.data?.category);
-      setNotes(location?.state?.data?.notes);
-      setDate(location?.state?.data?.date);
+    if (location.state === "submit") {
+      handlesubmit();
     } else {
-      if (location?.state?.amount === undefined) {
-        setAmount("");
-        setCategory("");
+      if (location?.state?.type === "edit") {
+        setAmount(location?.state?.data?.amount);
+        setCategory(location?.state?.data?.category);
+        setNotes(location?.state?.data?.notes);
+        setDate(location?.state?.data?.date);
       } else {
-        setAmount(location.state.amount);
-        setCategory(location.state.category);
+        if (location?.state?.amount === undefined) {
+          setAmount("");
+          setCategory("");
+        } else {
+          setAmount(location.state.amount);
+          setCategory(location.state.category);
+        }
       }
     }
-  }, []);
 
-  const handlesubmit = (e) => {
-    e.preventDefault();
+    // if(location.state == 'submit'){
+    //   handlesubmit('kp')
+    // }
+  }, [location?.state]);
+
+  const handlesubmit = () => {
+    // e.preventDefault();
     var user = sessionStorage.getItem("email");
     if (location?.state?.type === "edit") {
       const regobj = { amount, category, notes, date, user };
@@ -41,7 +49,11 @@ const Expense = (props) => {
         )
         .then((res) => {
           toast.success("Updated Successully");
-          navigate(-1);
+          if (location.state === "submit") {
+            navigate(-2);
+          } else {
+            navigate(-1);
+          }
         })
         .catch((err) => {});
     } else {

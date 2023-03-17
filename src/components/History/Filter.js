@@ -1,12 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import data from '../../db.json'
+import data from "../../db.json";
 
 import "./History.css";
 import { useNavigate } from "react-router-dom";
 import { auto } from "@popperjs/core";
-
 
 const Filter = () => {
   const [record, setRecord] = useState([]);
@@ -39,10 +38,9 @@ const Filter = () => {
     navigate("/expense", { state: { type: "edit", data: val } });
   };
 
-
   return (
     <div>
-      <div className="table-container">
+      <div className="table-container mb-5">
         <table className="transaction-table">
           <thead>
             <tr>

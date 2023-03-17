@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import { useNavigate } from "react-router-dom";
 
-function Speech(props) {
+function Speech() {
   const navigate = useNavigate();
 
   function handleNavigate(page) {
@@ -28,6 +28,8 @@ function Speech(props) {
           handleNavigate(commandData.page);
         } else if (commandData.command === "expense") {
           handleExpense(commandData.amount, commandData.category);
+        } else if (commandData.command === "save") {
+          navigate("/expense", { state: "submit" });
         }
       },
     });

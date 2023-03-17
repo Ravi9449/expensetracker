@@ -26,11 +26,8 @@ const Login = () => {
           } else {
             if (resp.password === password) {
               toast.success("Success");
-              console.log("loggedddd");
               sessionStorage.setItem("email", id);
               navigate("/");
-              // changeIsLogin(true);
-              //   navigate("/");
             } else {
               toast.error("Please Enter valid credentials");
             }

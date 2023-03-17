@@ -34,6 +34,7 @@ const Registration = () => {
   };
   return (
     <div className={"loginContainer"}>
+      <ToastContainer />
       <div className={"loginContainerv2"}>
         <h1>Create your account</h1>
         <div className={"inputContainer"}>
