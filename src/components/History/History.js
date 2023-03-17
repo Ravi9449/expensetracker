@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import data from '../../db.json'
 
 import "./History.css";
 import { useNavigate } from "react-router-dom";
+import { auto } from "@popperjs/core";
 
 const History = () => {
   const [record, setRecord] = useState([]);
@@ -36,8 +38,30 @@ const History = () => {
     navigate("/expense", { state: { type: "edit", data: val } });
   };
 
+  const [categoryFilter, setCategoryFilter] = useState("");
+  const filteredIncome = data.expense.filter((item) => item.category === categoryFilter || categoryFilter === "");
+
   return (
     <div>
+      <div className="col-lg-6">
+                <div className="form-group">
+                  <label>
+                    Category<span className="errmsg">*</span>
+                  </label>
+                  <select
+                    value={categoryFilter}
+                    onChange={(e) => setCategoryFilter(e.target.value)}
+                    className="form-control"
+                    style={{width:220}}
+                  >
+                    <option value=" ">Select a category</option>
+                    <option value="food">Food</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="travel">Travel</option>
+                    <option value="entertainment">Entertainment</option>
+                  </select>
+                </div>
+              </div>
       <div className="table-container">
         <table className="transaction-table">
           <thead>
@@ -50,7 +74,7 @@ const History = () => {
             </tr>
           </thead>
           <tbody>
-            {record.map((rec) => (
+            {filteredIncome.map((rec) => (
               <tr>
                 <td>{rec.amount}</td>
                 <td>{rec.category}</td>

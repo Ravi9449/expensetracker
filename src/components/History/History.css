@@ -12,7 +12,7 @@
   }
   
   .transaction-table th {
-    background-color: #2196f3;
+    background-color: #27699e;
     color: #fff;
   }
   
@@ -21,7 +21,7 @@
   }
   
   .transaction-table button {
-    background-color: #f44336;
+    background-color: #cb453c;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -35,11 +35,11 @@
   }
   
   .transaction-table button.edit {
-    background-color: #2196f3;
+    background-color: #27699e;
   }
   
   .transaction-table button.edit:hover {
-    background-color: #0d8bf2;
+    background-color: #27699e;
   }
   
   .edit-modal {
@@ -89,7 +89,7 @@
   }
   
   .edit-modal button:hover {
-    background-color: #0d8bf2;
+    background-color: #27699e;
   }
   
   .edit-modal button.cancel {

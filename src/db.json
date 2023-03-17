@@ -2,11 +2,35 @@
   "expense": [
     {
       "amount": "100",
-      "category": "food",
+      "category": "Food",
       "notes": "gortz",
       "date": "2023-03-16",
       "user": "check@mail.com",
       "id": 1
+    },
+    {
+      "amount": "635",
+      "category": "Groceries",
+      "notes": "dummy",
+      "date": "2023-03-16",
+      "user": "monisha@gmail.com",
+      "id": 2
+    },
+    {
+      "amount": "345",
+      "category": "travel",
+      "notes": "study",
+      "date": "2023-03-08",
+      "user": "monisha@gmail.com",
+      "id": 3
+    },
+    {
+      "amount": "425",
+      "category": "travel",
+      "notes": "holiday",
+      "date": "2023-03-04",
+      "user": "monisha@gmail.com",
+      "id": 4
     }
   ],
   "users": [
@@ -14,6 +38,11 @@
       "name": "check",
       "id": "check@mail.com",
       "password": "12345"
+    },
+    {
+      "name": "Monisha G",
+      "id": "monisha@gmail.com",
+      "password": "monisha@12"
     }
   ]
 }
