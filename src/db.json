@@ -61,6 +61,14 @@
       "date": "2023-03-15",
       "user": "monisha@gmail.com",
       "id": 1
+    },
+    {
+      "amount": "342",
+      "category": "Salary",
+      "notes": "study",
+      "date": "2023-03-15",
+      "user": "monisha@gmail.com",
+      "id": 2
     }
   ]
 }
