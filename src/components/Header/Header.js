@@ -10,6 +10,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Expense from "../Expense/Expense";
 import { useNavigate } from "react-router-dom";
+import Income from "../Income/Income";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -59,6 +60,7 @@ const Header = () => {
         <Route path="/history" element={<History />} />
         <Route path="/tracker" element={<Tracker />} />
         <Route path="/expense" element={<Expense />} />
+        <Route path="/income" element={<Income />} />
       </Routes>
     </div>
   );

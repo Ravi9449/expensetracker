@@ -45,7 +45,7 @@ const Horizontal = () => {
      
         return (
           <div>
-            <Bar options={option} style={{width:800,height:550}} data={userData} />
+            <Bar options={option} style={{width:600,height:550}}  data={userData} />
           </div>
         );
 }

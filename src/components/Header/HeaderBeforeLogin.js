@@ -13,7 +13,7 @@ const HeaderBeforeLogin = () => {
     <div>
       <Navbar expand="lg" light style={{ backgroundColor: "#27699e" }}>
         <Container>
-          <Navbar.Brand style={{ fontSize: "1.5rem", gap: "1rem" }}>
+          <Navbar.Brand style={{ fontSize: "1.5rem", gap: "1rem",color: "white" }}>
             EasyTracker
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -23,7 +23,7 @@ const HeaderBeforeLogin = () => {
               style={{ fontSize: "1.3rem", gap: "2rem" }}
             >
               <Nav.Link href="/aboutus" style={{ color: "white" }}>
-                About US
+                About Us
               </Nav.Link>
               <Nav.Link href="/login" style={{ color: "white" }}>
                 Login

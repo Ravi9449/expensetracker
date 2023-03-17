@@ -8,7 +8,7 @@ const PieChart = () => {
     const filterr = ()=>{
         const filteredIncome = data.expense.filter((item) => item.category === categoryFilter || categoryFilter === "");
         return {
-           labels: filteredIncome.map((data) => data.category),
+           labels: '',
             datasets: [
             {
                 label: "Spent",
@@ -29,13 +29,7 @@ const PieChart = () => {
      
         return (
           <div>
-            
-            <select style={{width:120,marginLeft:'50%'}} value={categoryFilter} onChange={(event) => setCategoryFilter(event.target.value)}>
-                <option value="">All</option>
-                <option value="Travel">Travel</option>
-                <option value="Food">Food</option>
-                <option value="Others">Others</option>
-            </select>
+          
           
             <Pie style={{width:290,height:290}} data={filterr()} />
           </div>

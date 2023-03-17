@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   const [name, namechange] = useState("");
@@ -32,65 +33,50 @@ const Registration = () => {
       });
   };
   return (
-    <div>
-      <ToastContainer />
-      <div className="offset-lg-3 col-lg-6">
-        <form id="check" className="container" onSubmit={handlesubmit}>
-          <div className="card">
-            <div className="card-header">
-              <h1>Welcome to Registration</h1>
-            </div>
-            <div className="card-body">
-              <div className="row">
-                <div className="col-lg-6">
-                  <div className="form-group">
-                    <label>
-                      Name<span className="errmsg">*</span>
-                    </label>
-                    <input
-                      value={name}
-                      placeholder="Enter your Name"
-                      onChange={(e) => namechange(e.target.value)}
-                      className="form-control"
-                    ></input>
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="form-group">
-                    <label>
-                      EMAIL<span className="errmsg">*</span>
-                    </label>
-                    <input
-                      value={id}
-                      placeholder="Enter your Email"
-                      onChange={(e) => idchange(e.target.value)}
-                      className="form-control"
-                    ></input>
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="form-group">
-                    <label>
-                      Password<span className="errmsg">*</span>
-                    </label>
-                    <input
-                      value={password}
-                      placeholder="Enter Password"
-                      onChange={(e) => passwordchange(e.target.value)}
-                      type="password"
-                      className="form-control"
-                    ></input>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="card-footer">
-              <button type="submit" className="btn btn-primary">
-                Register
-              </button>
-            </div>
+    <div className={"loginContainer"}>
+      <div className={"loginContainerv2"}>
+        <h1>Create your account</h1>
+        <div className={"inputContainer"}>
+          <label>NAME</label>
+          <input
+            name="name"
+            onChange={(e) => namechange(e.target.value)}
+            placeholder="enter your name"
+            type="text"
+          />
+        </div>
+        <div className={"inputContainer"}>
+          <label>EMAIL</label>
+          <input
+            name="id"
+            onChange={(e) => idchange(e.target.value)}
+            placeholder="enter your email"
+            type="email"
+          />
+        </div>
+
+        <div className={"inputContainer"}>
+          <label>PASSWORD</label>
+          <input
+            name="password"
+            onChange={(e) => passwordchange(e.target.value)}
+            placeholder="enter your password"
+            type="password"
+          />
+        </div>
+
+        <div className={"footerContainer"}>
+          <div>
+            Already Signed Up? <Link to="/login">Login</Link>
           </div>
-        </form>
+          <div>
+            <Link to="">Forgot Password?</Link>
+          </div>
+        </div>
+
+        <button onClick={handlesubmit} className={"loginBTN"}>
+          REGISTER
+        </button>
       </div>
     </div>
   );
