@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { auto } from "@popperjs/core";
 
 
-const History = () => {
+const Filter = () => {
   const [record, setRecord] = useState([]);
   const navigate = useNavigate();
 
@@ -39,30 +39,9 @@ const History = () => {
     navigate("/expense", { state: { type: "edit", data: val } });
   };
 
-  const [categoryFilter, setCategoryFilter] = useState("");
-  const filteredIncome = data.expense.filter((item) => item.category === categoryFilter || categoryFilter === "");
 
   return (
     <div>
-     <div className="col-lg-6">
-                <div className="form-group">
-                  <label>
-                    Category<span className="errmsg">*</span>
-                  </label>
-                  <select
-                    value={categoryFilter}
-                    onChange={(e) => setCategoryFilter(e.target.value)}
-                    className="form-control"
-                    style={{width:220}}
-                  >
-                    <option value=" ">Select a category</option>
-                    <option value="food">Food</option>
-                    <option value="groceries">Groceries</option>
-                    <option value="travel">Travel</option>
-                    <option value="entertainment">Entertainment</option>
-                  </select>
-                </div>
-              </div>
       <div className="table-container">
         <table className="transaction-table">
           <thead>
@@ -75,7 +54,7 @@ const History = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredIncome.map((rec) => (
+            {record.map((rec) => (
               <tr>
                 <td>{rec.amount}</td>
                 <td>{rec.category}</td>
@@ -94,4 +73,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default Filter;
