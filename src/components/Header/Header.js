@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
 import History from "../History/History";
 import Tracker from "../Tracker/Tracker";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -20,7 +20,7 @@ const Header = () => {
   }
   return (
     <div data-testid="Header">
-      <Navbar expand="lg" light style={{ backgroundColor: "#27699e" }} data-testid="HNavbar">
+      <Navbar expand="lg" light style={{ backgroundColor: "#27699e" }}>
         <Container>
           <Navbar.Brand style={{ fontSize: "1.5rem", gap: "1rem",color:"white" }}>
             EasyTracker

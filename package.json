@@ -25,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -50,5 +50,13 @@
     "@cfaester/enzyme-adapter-react-18": "^0.7.0",
     "enzyme": "^3.11.0",
     "jest": "^27.5.1"
-  }
+  },
+  "jest": {
+    "transform": {
+     "^.+\\.jsx?$": "babel-jest"
+     },
+     "transformIgnorePatterns": [
+     "node_modules/(?!axios)"
+     ]
+     }
 }

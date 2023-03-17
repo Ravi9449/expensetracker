@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import data from '../../db.json';
 import "./BarChart.css";
 import { useNavigate } from "react-router-dom";

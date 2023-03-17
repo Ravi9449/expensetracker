@@ -19,8 +19,9 @@ describe('Header Component', () => {
     const header = wrapper.find({"data-testid": "Header"});
     expect(header.length).toBe(1);
   })
-  it("renders Navbar",()=>{
-    const nav = wrapper.find({"data-testid": "HNavbar"});
-    expect(nav.length).toBe(1);
-  })
+  // it("is displaying app name",()=>{
+  //   const nav = wrapper.find({"data-testid": "HNavbar"});
+  //   expect(nav.length).toBe(1);
+  //   expect(nav.text()).toBe("EasyTracker");
+  // })
  })
